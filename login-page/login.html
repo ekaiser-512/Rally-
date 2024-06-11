@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rally</title>
+    <link rel="stylesheet" href="./login.css">
+    <script src="https://kit.fontawesome.com/5a5fe2ae33.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <h1><i class="fa-solid fa-briefcase"></i> Rally</h1>
+            <div id="darkMode">
+                <label for="darkModeSwitch" class="switch-label">Dark Mode</label>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeSwitch">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </header>
+        <section id="login-box" class="formatting">
+            <h2>Login</h2>
+            <div id="login-error">
+                <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+            </div>
+            <form id="login-credentials" class="login-box-format">
+                <div class="username">
+                    <label for="username" id="remove-label">Username</label>
+                    <input type="text" id="username" name="username" required placeholder="username here">
+                </div>
+                <div class="password">
+                    <label for="password" id="remove-label">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="password here">    
+                </div> 
+                <div class="login-button">
+                    <label for="submit" id="remove-label"></label>
+                    <button type="submit">Login</button>  
+                </div>  
+            </form>
+            <div id="rememberMe">
+                <input type="checkbox" class="iRemember">
+                <label for="StayLoggedIn" class="iRemember">Stay Logged In?</label>
+            </div>
+            <div id="apiSignIn" class="formatting">
+                <button id="google" class="api-social">Sign in with Google</button>
+                <button id="facebook" class="api-social">Sign in with Facebook</button>
+            </div>
+        </section>
+    </div>
+    <script src="./login.js"></script>
+</body>
+</html>

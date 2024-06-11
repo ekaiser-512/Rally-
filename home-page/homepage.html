@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rally</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://kit.fontawesome.com/5a5fe2ae33.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="grid-container-header grid-item header">
+            <h1 class="grid-item-header header-title"><i class="fa-solid fa-briefcase"></i> Rally</h1>
+            <!-- Centered menu options/hamburger -->
+            <div class="grid-item-header header-menu">
+                <!-- Desktop menu -->
+                <nav class="nav-links nav-desktop">
+                    <ul class="no-bullets">
+                        <li><a href="https://www.mavenclinic.com/blog">Maven Blog</a></li>
+                        <li><a href="https://open.spotify.com/playlist/74yiWq4NeFh365V62i0yYW">Relatable Songs</a></li>
+                        <li><a href="https://www.google.com/search?q=wine+shop+near+me&oq=wine+shop+near+me&gs_lcrp=EgZjaHJvbWUqCggAEAAYyQMYgAQyCggAEAAYyQMYgAQyDQgBEAAYkgMYgAQYigUyDQgCEAAYkgMYgAQYigUyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBggHEEUYQNIBCTEwNjE2ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8">Need a Break?</a></li>
+                    </ul>
+                </nav>
+                <!-- Hamburger menu icon for mobile -->
+                <div class="hamburger-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <!-- Mobile menu -->
+                <div class="nav-links nav-mobile">
+                    <ul>
+                        <li><a href="https://www.mavenclinic.com/blog">Maven Blog</a></li>
+                        <li><a href="https://open.spotify.com/playlist/74yiWq4NeFh365V62i0yYW">Relatable Songs</a></li>
+                        <li><a href="https://www.google.com/search?q=wine+shop+near+me&oq=wine+shop+near+me&gs_lcrp=EgZjaHJvbWUqCggAEAAYyQMYgAQyCggAEAAYyQMYgAQyDQgBEAAYkgMYgAQYigUyDQgCEAAYkgMYgAQYigUyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBggHEEUYQNIBCTEwNjE2ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8">Need a Break?</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Username info on the far right -->
+            <div class="grid-item-header header-username" id="account-info-container">
+              <span id="account-info">Hi, username</span>
+              <button id="sign-out" class="sign-out-button">Sign Out</button>
+              <i class="fa-solid fa-circle-user"></i>
+          </div>
+      </header>
+
+        <main class="grid-container-main main" id="main-aside">
+            <!-- New post area -->
+            <section class="grid-item grid-container-new-post">
+                <h2 class="new-post-title">Share your Journey</h2>
+                <textarea class="new-post-textbox" name="new-post" id="new-post" cols="30" rows="10" placeholder="new post details"></textarea>
+                <button class="new-post-button" id="post-button">Post</button>
+            </section>
+
+            <div class="grid-container-search grid-item search-bar" id="search">
+                <!-- Search bar area -->
+                <label class="search-label search-grid-item" for="search-bar">Search Posts</label>
+                <input placeholder="search here" class="search-input search-grid-item" title="search" type="text" id="search-bar" name="search-bar">
+                <button class="search-button search-grid-item">Search</button>
+                <div>
+                    <!-- Sort bar area -->
+                    <label for="sort-options" id="sort-label">Sort</label>
+                    <select class="sort-dropdown search-grid-item" aria-placeholder="sort-by" name="sort-by" id="sort-by">
+                        <option value="oldest">Oldest to Newest</option>
+                        <option value="newest">Newest to Oldest</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid-container-article grid-item">
+                <article class="grid-container-article-section article-grid-item">
+                    <h2 class="article-title"></h2>
+                    <div id="newPostContainer"></div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Aside area that needs to have an API -->
+        <aside class="grid-container-aside aside grid-item job-openings" id="mommaAside">
+            <h2>Need a Momma giggle?</h2>
+            <button id="giggle" class="giggle">Tickle me</button>
+            <div id="results"></div>
+        </aside>
+    </div>
+    <script src="homepage.js"></script>
+    <script src="api.js"></script>
+</body>
+<footer class="grid-container-footer grid-item footer">
+  <h5><a href="mailto:ekaiser@indeed.com">Contact Us</a></h5>
+</footer>
+</html>
